@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garage Parrot ECF</title>
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/cars.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+<body>
+  <!--=====START HEADER=====-->
+  <header>
+    <div class="grid">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand me-auto" href="#">
+            <img src="../assets/images/garageparrotlogo.png">
+          </a>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Garrage Parrot</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2 active" aria-current="page" href="page-acceuil.html">Acceuil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="page-service.html">Entretenir votre voiture</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="page-voiture.html">Voitures d'occasions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="page-contact.html">Contacts</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a href="../page html/login-page.html" class="login-button">Espace Pro</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--=====END HEADER=====-->
+  <!--=====START MAIN=====-->
+  <main>
+    <div class="grid">
+    <div class="container-title">
+    <h1>Trouvez la voiture de vos rêves avec les conseils avisés du Garage Parrot</h1>
+    <div class="red-line"></div>
+    </div>
+    
+      <!--=Filtre voiture=--> 
+      
+      <div class="filter">
+      <div class="container-filter" id="filters ">
+        <div class="input-price">
+        <label for="priceMin">Prix:</label>
+        <input type="number" placeholder="Min" step="1000" id="priceMin" name="priceMin" min="1000" max="50000" value="1000" oninput="clearIfEmpty(this)">
+        <input type="number" placeholder="Max" step="1000" id="priceMax" name="priceMax" min="1000" max="50000" value="50000" oninput="clearIfEmpty(this)">
+        </div>
+        <div class="input-mileage">    
+        <label for="mileageMin">Km:</label>
+        <input type="number" placeholder="Min" step="10000" id="mileageMin" name="mileageMin" min="0" max="300000" value="0" oninput="clearIfEmpty(this)">
+        <input type="number" placeholder="Max" step="10000" id="mileageMax" name="mileageMax" min="0" max="300000" value="300000" oninput="clearIfEmpty(this)">
+        </div>
+        <div class="input-year">
+        <label for="yearMin">Année:</label>
+        <input type="number" placeholder="Min" id="yearMin" name="yearMin" min="1980" max="2024" value="1980" oninput="clearIfEmpty(this)">
+        <input type="number" placeholder="Max" id="yearMax" name="yearMax" min="1980" max="2024" value="2024" oninput="clearIfEmpty(this)">
+        </div>    
+         </div>
+         
+        <div class="input-radio">
+        <label for="category">Catégorie de voiture:</label>
+          <div class="radio" id="category">
+            <input type="radio" id="4x4" name="category" value="4x4">
+            <label for="4x4">4x4</label>
+            <input type="radio" id="berline" name="category" value="berline">
+            <label for="berline">Berline</label>
+            <input type="radio" id="break" name="category" value="break">
+            <label for="break">Break</label>
+            <input type="radio" id="citadine" name="category" value="citadine">
+            <label for="citadine">Citadine</label>
+            <input type="radio" id="suv" name="category" value="suv">
+            <label for="suv">SUV</label>
+            <input type="radio" id="monospace" name="category" value="monospace">
+            <label for="monospace">Monospace</label> 
+        </div> 
+        </div>
+    </div>
+
+
+    <!--Card Cars-->
+    
+        <div class="container-card">
+            <div class="card" style="width: 18rem;">
+              <a href="page-annonce-voiture.html">
+             <img src="../assets/images/bmw1.png" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">BMW Berline</h5>
+                <p class="card-text">Diesel 80000 km 2018 Manuelle</p>
+                <p class="card-price">25000€</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <a href="page-annonce-voiture.html">
+              <img src="../assets/images/dacia.png" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">BMW Berline</h5>
+                <p class="card-text">Diesel 80000 km 2018 Manuelle</p>
+                <p class="card-price">25000€</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <a href="page-annonce-voiture.html">
+              <img src="../assets/images/mercedes1.png" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">BMW Berline</h5>
+                <p class="card-text">Diesel 80000 km 2018 Manuelle</p>
+                <p class="card-price">25000€</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <a href="page-annonce-voiture.html">
+              <img src="../assets/images/opel.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">BMW Berline</h5>
+                <p class="card-text">Diesel 80000 km 2018 Manuelle</p>
+                <p class="card-price">25000€</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <a href="page-annonce-voiture.html">
+              <img src="../assets/images/peugeot.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">BMW Berline</h5>
+                <p class="card-text">Diesel 80000 km 2018 Manuelle</p>
+                <p class="card-price">25000€</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <a href="page-annonce-voiture.html">
+              <img src="../assets/images/renault1.png" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">BMW Berline</h5>
+                <p class="card-text">Diesel 80000 km 2018 Manuelle</p>
+                <p class="card-price">25000€</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  </main>
+  <!--=====END MAIN=====-->
+  <!--=====START FOOTER=====-->
+  <footer>
+    <div class="grid">
+      <div class="footer__contact">
+        <div class="contact__logo">
+          <img class="logo_beige" src="../assets/images/garageparrotlogo.png" alt="">
+          <p><i class="ri-map-pin-fill"></i>80-84 Route de Labège <br>31000 TOULOUSE</p>
+        </div>
+        <div class="contact__logo">
+          <p><i class="ri-phone-fill"></i>Téléphone : 05 31 61 65 63 </p>
+        </div>
+        <div class="contact__logo">
+          <p><i class="ri-mail-fill"></i>email: garageparrot@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer__schedule">
+        <h5>Horaires d'ouverture:</h5>
+        <ul>
+          <li>lun: 08h45-12h00, 14h00-18h00</li>
+          <li>mar: 08h45-12h00, 14h00-18h00</li>
+          <li>mer: 08h45-12h00, 14h00-18h00</li>
+          <li>jeu: 08h45-12h00, 14h00-18h00</li>
+          <li>ven: 08h45-12h00, 14h00-18h00</li>
+          <li>sam: 08h45-12h00</li>
+          <li>dim: Fermé</li>
+        </ul>
+      </div>
+      <div class="social__media">
+        <h5> Suivez-nous!</h5>
+        <a href="https://www.facebook.com/votrepagfacebook">
+          <i class="ri-facebook-circle-fill"></i>
+        </a>
+        <a href="https://www.instagram.com/votrecompteinstagram">
+          <i class="ri-instagram-fill"></i>
+        </a>
+        <a href="https://www.youtube.com/votrecompteyoutube">
+          <i class="ri-youtube-fill"></i>
+        </a>
+      </div>
+      <p class="cg">Conditions générales de ventes . Mention Légales . Politique de confidentialité</p>
+    </div>
+  </footer>
+  <!--=====END FOOTER=====-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../assets/JS/voiture.js"></script>
+</body>
+
+</html>
+        

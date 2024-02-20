@@ -1,0 +1,55 @@
+/*===Connexion Espace Pro====*/
+.form-group {
+    width: 28%;
+    margin: auto;
+    padding-top: 100px;
+}
+.bg {
+    background-color: #ebe8e0;
+}
+.btn-color {
+    border: none;
+}
+@media only screen and (max-width:600px){
+.form-group {
+    width: 100%;
+}
+}
+@media (max-width:1000px) and (min-width:600px){
+    .form-group {
+        width:80%;
+    }
+}
+@media (max-width: 1600px) and (min-width: 1000px) {
+    .form-group {
+        width: 80%;
+    }
+}
+
+/*===== Page Comment=====*/
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+  .rating input:checked + label {
+    background-color: #ffcc00;
+  }
+  
+
+  

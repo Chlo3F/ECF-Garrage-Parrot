@@ -1,0 +1,187 @@
+/*======BASIC======*/
+.grid {
+    display:grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
+  }
+.container-title {
+    max-width: 100%;
+    display: grid;
+    grid-column: 2/8;
+    margin-top: 150px;
+    text-align: center;
+  }
+ h1 {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .red-line{
+  background-color: #d01110;
+  max-width: 100%;
+  height: 5px;
+  margin: 10px;
+  }
+  .filter {
+    grid-column: 2/8;
+    border: 10px solid #ebe8e0;
+    margin: 25px;
+  }
+  .container-filter {
+    grid-column: 2/8;
+    justify-items: center;
+    padding-top: 20px;
+    text-align: center;
+  }
+ .container-filter input {
+    border: 2px solid #a8bbb0;
+    border-radius: 8px;
+    text-align: center;
+ }  
+ .input-price,
+ .input-mileage,
+ .input-year {
+    margin: 10px;
+    font-weight: 500;
+ }
+ .input-radio {
+    grid-column: 2/8;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+ }
+  .container-card {
+    grid-column:1/9;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .card {
+    box-shadow: 2px 2px 0px 1px #D01110;
+    border: 2px solid #ebe8e0;
+  }
+  .card-text,
+  .card-title,
+  .card-price {
+    text-align: center;
+  }
+  .card-price {
+    color: #d01110;
+    font-weight: 500;
+  }
+@media (min-width: 992px) {
+.grid {
+    justify-content: space-between;
+}    
+.filter {
+    grid-column: 1/3;
+    
+}
+.container-filter,
+.input-radio
+ {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-left: 15px;
+}
+.container-filter {
+align-content: center;
+}
+.radio input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container-card { 
+    grid-column: 3/9;
+    grid-template-columns: repeat(3, 1fr);
+    align-self: center; 
+}
+}
+  /*===PAGE ANNONCE===*/
+  /*=CAROUSEL=*/
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px; 
+  }
+.container-carousel {
+    display: grid;
+    grid-column: 1 / span1;
+    margin-top: 150px;
+    margin-bottom: 15px;
+}
+.carousel-indicators img{
+    width: 70px;
+    display: block;
+}
+.carousel-indicators button{
+    width: max-content!important;
+}
+.carousel-indicators{
+    position: unset!important;
+}
+.container-info {
+    grid-column: 2/8;
+    grid-column: 1 / span1;
+    margin-top: 10px;
+}
+.model-car {
+    background-color: #ebe8e0;
+    padding: 5px;
+    margin: 15px;
+    text-align: center;
+    font-weight: 600;
+    border: 3px solid #D01110;
+}
+h2 {
+    text-align: center;
+
+}
+.car-set {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-weight: 500;
+}
+
+/*=lien contact=*/
+.lien-contact {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.lien-contact a {
+    background-color: #ebe8e0;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 8px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    text-decoration: none; 
+  }
+
+  .lien-contact a:hover {
+    box-shadow: -4px 4px 0px #d01110;
+  }
+
+  @media (min-width: 992px) {
+ .grid-container {
+    grid-template-columns: 1fr 1fr;
+ }
+ .container-carousel {
+    grid-column: 1 /span 1;
+    margin-bottom: 50px;
+ }
+ .container-info {
+    grid-column: 2 / span1;
+    margin-top: 120px;
+    display: grid;
+    align-content: space-evenly;
+ }
+  }
